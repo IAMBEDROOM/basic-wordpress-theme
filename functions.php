@@ -78,3 +78,7 @@ function basic_wp_theme_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'basic_wp_theme_widgets_init' );
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';

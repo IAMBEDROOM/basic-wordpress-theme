@@ -22,7 +22,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'basic-wordpress-theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<?php
+	$header_layout = get_theme_mod( 'header_layout', 'centered' );
+	$header_class  = ' layout-' . sanitize_html_class( $header_layout );
+	?>
+	<header id="masthead" class="site-header<?php echo esc_attr( $header_class ); ?>">
         <div class="container">
             <div class="site-branding">
                 <?php
